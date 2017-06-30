@@ -20,7 +20,10 @@
 * PCB Images: [https://github.com/metafetish/buttshock-et312-images](https://github.com/metafetish/buttshock-et312-images)
 * Schematics: [https://github.com/metafetish/buttshock-et312-schematics](https://github.com/metafetish/buttshock-et312-schematics)
 * Firmware Patcher: [https://github.com/metafetish/buttshock-et312-firmware-patcher-js](https://github.com/metafetish/buttshock-et312-firmware-patcher-js)
+* Firmware: [https://github.com/metafetish/buttshock-et312-frankenbutt](https://github.com/metafetish/buttshock-et312-frankenbutt)
+* Firmware: [https://github.com/metafetish/buttshock-et312-firmware](https://github.com/metafetish/buttshock-et312-firmware)
 * Documentation: [https://github.com/metafetish/buttshock-protocol-docs](https://github.com/metafetish/buttshock-protocol-docs)
+* Clone: [https://github.com/metafetish/mk312-bt](https://github.com/metafetish/mk312-bt)
 
 
 

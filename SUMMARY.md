@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Arduino](arduino.md)
+* [BKK](bkk.md)
 * [E-Stim Systems](estim-systems.md)
 * [Erostek](erostek-et-232.md)
 * [Fleshlight](fleshlight-launch.md)
@@ -22,6 +23,7 @@
 * [Sinulate](sinulate.md)
 * [Sony](sony-rez-trancevibrator.md)
 * [Vibease](vibease.md)
-* [Vorze](vorze.md)
-* Estim Systems
+* [Vibratissimo](vibratissimo.md)
+
+
 
