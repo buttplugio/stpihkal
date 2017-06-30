@@ -1,0 +1,2 @@
+# Funscript
+* Format: JSON
