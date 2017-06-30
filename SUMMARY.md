@@ -1,24 +1,29 @@
 # Summary
 
 * [Introduction](README.md)
-* [Erostek ET-232](erostek-et-232.md)
-* Erostek ET-312B
+* [Arduino](arduino.md)
+* [BKK](bkk.md)
+* [E-Stim Systems](estim-systems.md)
+* [Erostek](erostek-et-232.md)
 * [Fleshlight](fleshlight-launch.md)
-* Highjoy
-* IMToy
-* Interactive Fleshlight
-* Je Joue
-* Kiiroo
-* Klic Klic
-* Minna
-* OhMiBod
-* PicoBang
+* [Highjoy](highjoy.md)
+* [IMToy](imtoy.md)
+* [Interactive Fleshlight](interactive-fleshlight.md)
+* [Je Joue](je-joue.md)
+* [Kiiroo](kiiroo.md)
+* [Klic Klic](klic-klic.md)
+* [Lovense](lovense.md)
+* [Minna](minna.md)
+* [OhMiBod](ohmibod.md)
+* [Pavlok](pavlok.md)
+* [PicoBang](picobang.md)
 * [RealTouch](realtouch.md)
-* SayberX
+* [SayberX](sayberx.md)
 * [Segment](segment.md)
-* Sinulate
+* [Sinulate](sinulate.md)
 * [Sony](sony-rez-trancevibrator.md)
 * [Vibease](vibease.md)
-* [Vorze](vorze.md)
-* [WeVibe](wevibe.md)
+* [Vibratissimo](vibratissimo.md)
+
+
 
