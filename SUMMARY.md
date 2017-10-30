@@ -12,6 +12,7 @@
  * [Interactive Fleshlight](hardware/interactive-fleshlight.md)
  * [Je Joue](hardware/je-joue.md)
  * [Kiiroo](hardware/kiiroo.md)
+ * [Kiiroo Bootloader](hardware/kiiroo-bootloader.md)
  * [Klic Klic](hardware/klic-klic.md)
  * [Lovense](hardware/lovense.md)
  * [Magic Motion](hardware/magic-motion.md)

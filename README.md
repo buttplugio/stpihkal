@@ -1,6 +1,6 @@
-# STPIHKAL
+# Sex Toy Protocols I Have Known And Loved
 
-The big book of computer controlled sex toy protocols.
+A Sex Tech Reverse Engineering Love Story.
 
 # License
 
