@@ -1,0 +1,22 @@
+{
+  "name": "stpihkal",
+  "version": "0.1.0",
+  "description": "Sex Toy Protocols I Have Known And Loved",
+  "scripts": {
+    "build": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metafetish/stpihkal.git"
+  },
+  "author": "Kyle Machulis <kyle@machul.is>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/metafetish/stpihkal"
+  },
+  "homepage": "https://github.com/metafetish/stpihkal",
+  "devDependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2"
+  }
+}
