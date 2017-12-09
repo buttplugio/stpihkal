@@ -27,11 +27,11 @@
  * [Sony](hardware/sony-rez-trancevibrator.md)
  * [Vibease](hardware/vibease.md)
  * [Vibratissimo](hardware/vibratissimo.md)
-* Software
- * [Feelme](software/feelme.md)
- * [Funscript](software/funscript.md)
- * [Kiiroo](software/kiiroo.md)
- * [RealTouch](software/realtouch.md)
- * [VirtualRealPlayer](software/virtualrealplayer.md)
- * [Vorze Interactive](software/vorze-interactive.md)
+* Video Encoding Formats
+ * [Feelme](video-encoding-formats/feelme.md)
+ * [Funscript](video-encoding-formats/funscript.md)
+ * [Kiiroo](video-encoding-formats/kiiroo.md)
+ * [RealTouch](video-encoding-formats/realtouch.md)
+ * [VirtualRealPlayer](video-encoding-formats/virtualrealplayer.md)
+ * [Vorze Interactive](video-encoding-formats/vorze-interactive.md)
 
