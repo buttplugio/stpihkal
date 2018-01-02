@@ -30,8 +30,7 @@ To send data to the A10 Cyclone Unit, use the following characteristic
 Vorze toys are distributed with a USB dongle that will cause the BTLE
 connection to emulate a serial port on windows. This allows the toy to
 be easily used on all operating systems that do not have BTLE
-capabilities, such a Windows XP/7/8/10 (though Windows 10 will have
-BTLE capabilities sometime in 2017), OS X < 10.6, or Linux with Bluez
+capabilities, such a Windows XP/7/8, OS X < 10.6, or Linux with Bluez
 < 5.28.
 
 Unlike Bluetooth 2 SPP, serial settings seem to matter for this
