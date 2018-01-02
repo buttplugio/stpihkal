@@ -9,11 +9,8 @@ Bluetooth control allows for rotation direction and speed to be set.
 
 ## Bluetooth Details
 
-Vorze uses Bluetooth LE to communicate with other machines. 
-
-### A10 Cyclone
-
-The main service UUID for the A10 Cyclone is
+Vorze uses Bluetooth LE to communicate with other machines. The main
+service UUID for the A10 Cyclone is
 
 ```
 40ee1111-63ec-4b7f-8ce7-712efd55b90e
