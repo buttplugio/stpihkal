@@ -4,6 +4,7 @@
 * Protocols
  * [Fleshlight Launch](hardware/fleshlight-launch.md)
  * [Lovense (All)](hardware/lovense.md)
+ * [Vorze A10 Cyclone SA](hardware/vorze-a10-cyclone-sa.md)
 * Firmware and Bootloaders
  * [Kiiroo](firmware/kiiroo.md)
 * Video Encoding Formats
