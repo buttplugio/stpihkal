@@ -1,7 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* Communication Protocols
+* Protocols and Memory Layouts
+ * [Erostek ET232](hardware/erostek-et232.md)
  * [Erostek ET312B](hardware/erostek-et312b.md)
  * [Fleshlight Launch](hardware/fleshlight-launch.md)
  * [Kiiroo Onyx 1/Pearl 1](hardware/kiiroo-onyx-pearl-one.md)
