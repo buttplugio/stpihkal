@@ -20,4 +20,5 @@
  * [RealTouch](video-encoding-formats/realtouch.md)
  * [VirtualRealPlayer](video-encoding-formats/virtualrealplayer.md)
  * [Vorze Interactive](video-encoding-formats/vorze-interactive.md)
-
+* Misc
+ * [Buttplug Redirect](misc/buttplug-redirect.md)
