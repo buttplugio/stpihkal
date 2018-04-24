@@ -1,18 +1,30 @@
 language: node_js
 sudo: false
 node_js:
-  - 8
+  - 9
+
 install:
   - yarn
+
 script:
   - yarn build
 
 cache: yarn
 
 deploy:
-  provider: pages
+- provider: pages
   local_dir: _book
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
+- provider: s3
+  access_key_id:
+    secure: kjrwK1eXSOobAz/1XJhE5FwX/jcxLo8e9aqsMGw0xFhLc+6S5u8bilgD5pA8P+RTbbsVldRv8xOvLUCFpBTfgfbq4iy9hq/IFCgx8hCz2yy9NE94pneoArdz/xFSoWaTTpK5sfDrsmdYbx3PBRMo7WNW5riy6Fhy/S82wmcASQ2shPzotB5WGe3FT7JKrdqcVsaxiQsi3I+ChBH1qhMGjFHGO5v0N4b7rD40/WHeya1ja/5AiM6VLruAVuGoS2Ri9r2TMVIRAbW+nWE47C6U+Z/2TyEvYY8dErTtXQh54b5ncQhTxV5kcRC3XDeEOnw5dRiB10t8EXFkKNyytk/LMjvnZtGrU2G3/+wd2yiPlTpKN8iwBz7cBcTonyfAWVor+dUVo0PfOJ9vrqI79ySmhlOChMGgYx5xvg/C+rkYGTBXV9PReeYnuRSO9ZXQvz4X0kd1fP4qZ9dwR6k1E+SN52fGeN/RsNkGxzwftu1Wzuv+ajGx/ZayYI2wp3NwkRqwZw1+wkyFYM/q0OkWjL/OMUeqUqEA9Oo+7JZCauWg67KRPwt6eiViQsZpzWiKmssQbNsYWFhpvdrVxIf68nxngXW1IDdmF6eJPdMtmiyBUPS9oMjNCscLM1Mu1skwrtGOKRTBbng3sLXaAyIv9QycR3AnH7W+W2XQvXqzjJbJNeY=
+  secret_access_key:
+    secure: q6Dc6KToxyYy4DXGy/kVWrzUivBUeJpZnTr0djAMK+o6cBKZgOYCsr4Ct5WaK+uFNLgq3IIwLQ6gNWraSO65LJSi6F299rZGrWAyOsr6bL9/rPCP4nNybQbU6zdRtaeD0/fpc8DHVtTXLWIgrcrveUNKpThU9dx4U+hKe8pst4uL+xv1+uHjuzkoUao5BT5OcV3DFgD86yah7o40etgaJGDpgMBz7VBMbh1XmVAS0Ie4VS17WZ4YjObO/2b4gDvJ90J9xi7DQ70Xyn58su/WRWyFTjB5Rs5nl1mCR2bixOBnHc5Jxp6OfwPztn/yVnh4WJ3Rtk2/8Uyhhte9rV5Z6rc3b8eRnNqmgGoq7MYYts43vT5IZGsUn6rJE2nZC1ZbOwL8PQnJmNEE1y7IjX6QKrbP043PpjTUK8h51LgGonanWfC7ACwLlLY8K8De+BUyChfRpxWWSYWNfgp2zU83i5XQqQCm6x6ogUIkQZqy83IJpDaIzNxXit7YKo5cTTPTa3JamooJdzVpMyB5lxigktwzp+5rlQ19BV0f/XGYW1ZkUrN1Lm4GwzHl4GDE2MWT/WIpI2CrROFmdsryHnF2qRvjRqyRAd3OSE7eOITiL23hcBM4/2j7Z08359cTSHuZNkfTOwPP/zHCtrISX3oobdKS09TlMyIeVcezspVLEfg=
+  bucket: docs.buttplug.io
+  acl: public_read
+  local_dir: _book
+  skip_cleanup: true
+  upload-dir: stpihkal
   on:
     branch: master
