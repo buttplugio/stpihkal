@@ -18,5 +18,8 @@
   "devDependencies": {
     "gitbook": "^3.2.3",
     "gitbook-cli": "^2.3.2"
+  },
+  "dependencies": {
+    "gitbook-plugin-piwik": "^0.2.1"
   }
 }
