@@ -1,30 +1,31 @@
 language: node_js
 sudo: false
 node_js:
-  - 9
-
+- 9
 install:
-  - yarn
-
+- yarn
 script:
-  - yarn build
-
+- yarn build
 cache: yarn
-
+env:
+  secure: FDZM2a5Dt+8qP328ew8YYAYFgBrwD1TOnKuZr17Pi9Gd1BqJAiOb5h3YumosugDvCG+mwpSWS+AqTcBPUPOmcHbsLUZG3RkhOAtAnbixDoz4tS116ZXGslAwb0DooT8ixwgsCK6TGjwucjnF1ZZymbx6m3NWmQC5sHZXOWH9r3Bsyc8Rx8FtXxzW34vWqr8BT2NSFZpULsPh+at9RWnS2BQLUS6rSRU44564rP//j+fjJvqtPArMdvLukmUV7P9rt1vKddETJUVH9oRg9jR0xJYwuuy7IUfx+dgKbNin2Ca7EI5DfmuMAKO3ecZirCalJ/Ut+jMoM7uXDNGH2nowvkszEwWKV6Ewf4gNpy+EQ2rOqfP1hu67j5qVT04yeE4pxboFdxnjGi6SeGeI85nhv/+LJ0VOO7xcjFW0k4qMWINnyY8Vpzgs5GAYp5CKeh8avfWzKvU28ALZ3oAqaSVs9n8SsLmkabAzgXoMPGRMjy4UTwqnrqlhp9ENxXKJcxFHI/l1bNeLayzxBzBLqXZnvF8A0tW28E+BSH005LWOziIr5BybQZWr/CEBlu3vk2RR/BUCocR6IVUogalLMyskN02RkgFxeHNsyMZR8eIjZATxnuGEBdmbD8v2feL8qUg8nvX3/t4IIR2KMbq1PFE02stJBt9NIPhnTAJK5jeEsmk=
 deploy:
 - provider: pages
   local_dir: _book
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  github_token: "$GITHUB_TOKEN"
 - provider: s3
   access_key_id:
     secure: kjrwK1eXSOobAz/1XJhE5FwX/jcxLo8e9aqsMGw0xFhLc+6S5u8bilgD5pA8P+RTbbsVldRv8xOvLUCFpBTfgfbq4iy9hq/IFCgx8hCz2yy9NE94pneoArdz/xFSoWaTTpK5sfDrsmdYbx3PBRMo7WNW5riy6Fhy/S82wmcASQ2shPzotB5WGe3FT7JKrdqcVsaxiQsi3I+ChBH1qhMGjFHGO5v0N4b7rD40/WHeya1ja/5AiM6VLruAVuGoS2Ri9r2TMVIRAbW+nWE47C6U+Z/2TyEvYY8dErTtXQh54b5ncQhTxV5kcRC3XDeEOnw5dRiB10t8EXFkKNyytk/LMjvnZtGrU2G3/+wd2yiPlTpKN8iwBz7cBcTonyfAWVor+dUVo0PfOJ9vrqI79ySmhlOChMGgYx5xvg/C+rkYGTBXV9PReeYnuRSO9ZXQvz4X0kd1fP4qZ9dwR6k1E+SN52fGeN/RsNkGxzwftu1Wzuv+ajGx/ZayYI2wp3NwkRqwZw1+wkyFYM/q0OkWjL/OMUeqUqEA9Oo+7JZCauWg67KRPwt6eiViQsZpzWiKmssQbNsYWFhpvdrVxIf68nxngXW1IDdmF6eJPdMtmiyBUPS9oMjNCscLM1Mu1skwrtGOKRTBbng3sLXaAyIv9QycR3AnH7W+W2XQvXqzjJbJNeY=
   secret_access_key:
     secure: q6Dc6KToxyYy4DXGy/kVWrzUivBUeJpZnTr0djAMK+o6cBKZgOYCsr4Ct5WaK+uFNLgq3IIwLQ6gNWraSO65LJSi6F299rZGrWAyOsr6bL9/rPCP4nNybQbU6zdRtaeD0/fpc8DHVtTXLWIgrcrveUNKpThU9dx4U+hKe8pst4uL+xv1+uHjuzkoUao5BT5OcV3DFgD86yah7o40etgaJGDpgMBz7VBMbh1XmVAS0Ie4VS17WZ4YjObO/2b4gDvJ90J9xi7DQ70Xyn58su/WRWyFTjB5Rs5nl1mCR2bixOBnHc5Jxp6OfwPztn/yVnh4WJ3Rtk2/8Uyhhte9rV5Z6rc3b8eRnNqmgGoq7MYYts43vT5IZGsUn6rJE2nZC1ZbOwL8PQnJmNEE1y7IjX6QKrbP043PpjTUK8h51LgGonanWfC7ACwLlLY8K8De+BUyChfRpxWWSYWNfgp2zU83i5XQqQCm6x6ogUIkQZqy83IJpDaIzNxXit7YKo5cTTPTa3JamooJdzVpMyB5lxigktwzp+5rlQ19BV0f/XGYW1ZkUrN1Lm4GwzHl4GDE2MWT/WIpI2CrROFmdsryHnF2qRvjRqyRAd3OSE7eOITiL23hcBM4/2j7Z08359cTSHuZNkfTOwPP/zHCtrISX3oobdKS09TlMyIeVcezspVLEfg=
-  bucket: docs.buttplug.io
+  bucket: docs.buttplug.io.s3-us-west-1.amazonaws.com
   acl: public_read
   local_dir: _book
   skip_cleanup: true
   upload-dir: stpihkal
   on:
     branch: master
+after_deploy:
+- aws configure set preview.cloudfront true
+- aws cloudfront create-invalidation --distribution-id $CF_DISTRO_ID --paths "/*"
