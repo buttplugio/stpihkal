@@ -4,7 +4,7 @@ STPIHKAL (pronouned stuff-eye-call): A Sex Robot Love Story
 
 by the Metafetish Development Team
 
-Rendered version at [https://metafetish.github.io/stpihkal](https://metafetish.github.io/stpihkal)
+Rendered version at [https://docs.buttplug.io/stpihkal](https://docs.buttplug.io/stpihkal)
 
 ## Introduction
 
