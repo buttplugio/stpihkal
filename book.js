@@ -5,8 +5,10 @@ if (process.env.CI) {
   module.exports["plugins"] = ["piwik"];
   module.exports["pluginsConfig"] = {
     "piwik": {
-      "URL": "apps.nonpolynomial.com/piwik/",
-      "siteId": 8
+      "URL": "apps.nonpolynomial.com/p/",
+      "siteId": 8,
+      "phpPath": "js/",
+      "jsPath": "js/"
     }
   };
 }
