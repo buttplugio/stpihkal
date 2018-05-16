@@ -8,7 +8,7 @@
  * [Fleshlight Launch](hardware/fleshlight-launch.md)
  * [Kiiroo Onyx 1/Pearl 1](hardware/kiiroo-onyx-pearl-one.md)
  * [Lovense (All)](hardware/lovense.md)
- * [Vorze A10 Cyclone SA](hardware/vorze-a10-cyclone-sa.md)
+ * [Vorze SA (A10 Cyclone SA, UFO SA)](hardware/vorze-sa.md)
 * Firmware and Bootloaders
  * [Kiiroo](firmware/kiiroo.md)
 * Network Protocols
