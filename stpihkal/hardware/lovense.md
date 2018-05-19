@@ -103,8 +103,8 @@ with a number, the range of which is mentioned in the description.
 
 #### Get Device Information
 
-Returns toy model type (see [models](models.md) for model letters),
-Firmware version, and bluetooth MAC address, as a colon delimited list
+Returns toy model type, firmware version, and bluetooth MAC address,
+as a colon delimited list
 
 _Availability:_ All toys
 
@@ -119,6 +119,20 @@ C:11:0082059AD3BD;
 ```
 
 Denotes Nora toy, running v1.1 firmware, BT Addr of 00:82:05:9A:D3:BD
+
+**Model Types:**
+
+| Model | Type Letter |
+| ----- | ----------- |
+| Nora | A or C |
+| Max | B |
+| Ambi | L |
+| Lush | S |
+| Hush | Z |
+| Domi | W |
+| Edge | P |
+| Osci | O |
+
 
 #### Get Battery Level
 
