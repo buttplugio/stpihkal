@@ -35,10 +35,13 @@ Mode bytes are as follows:
 0xXX 0x0Y 0xZZ
 ```
 
-- X - Assumed to be some sort of status flag field. Starts out at 0x48 on boot.
+- X - Assumed to be some sort of status flag field. Starts out at 0x48
+  on boot.
   - Byte 0: On/Off (i.e. 0x48 plays nothing, 0x49 plays current pattern)
-- Y - Unknown, seems to be either 0x01 or 0x02. Needs to be 0x02 for real time control
-- ZZ - Unknown. Changes rapidly while playing patterns, could be some sort of memory offset.
+- Y - Unknown, seems to be either 0x01 or 0x02. Needs to be 0x02 for
+  real time control
+- ZZ - Unknown. Changes rapidly while playing patterns, could be some
+  sort of memory offset.
 
 **Control Chracteristic (6 bytes, read/write/notify)**
 
@@ -64,8 +67,10 @@ Motor Control bytes are as follows:
 0xAA 0xBB 0xCC 0xDD 0xEE 0xFF
 ```
 
-- AA - Motor level for Motor 1 (End with nubby bits), values 0x0-0x64. Ignores values > 0x64.
-- BB - Motor level for Motor 2
+- AA - Motor level for Motor 1 (End with nubby bits), values 0-56
+  (decimal, reason values are not aligned to 100 or powers of 2
+  unknown). Values larger than 56 may cause motor speed to change.
+- BB - Motor level for Motor 2 (See motor 1 notes for values)
 - So on down through the 6th motor.
 
 ## Intialization
@@ -93,7 +98,7 @@ Once the device is in real time control mode, motor values can be set
 by writing 6 bytes to the Motor Control characteristic.
 
 Writing bytes to this characteristic spins up the motor for a short
-time, around ~80-85ms (note that this timing was derived experimentally,
+time, around ~80-90ms (note that this timing was derived experimentally,
 and may be slightly different from the actual application distributed
 by MysteryVibe). To keep a sustained pattern, update messages must be
 sent frequently. It is currently unknown whether there is a device
@@ -103,7 +108,7 @@ To set all vibrators to top speed, the following packet can be sent to
 the motor control characteristic:
 
 ```
-0x64 0x64 0x64 0x64 0x64 0x64
+0x38 0x38 0x38 0x38 0x38 0x38
 ```
 
 ## Things to figure out
