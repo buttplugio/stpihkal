@@ -64,7 +64,7 @@ Motor Control bytes are as follows:
 0xAA 0xBB 0xCC 0xDD 0xEE 0xFF
 ```
 
-- AA - Motor level for Motor 1 (End with nubby bits)
+- AA - Motor level for Motor 1 (End with nubby bits), values 0x0-0x64. Ignores values > 0x64.
 - BB - Motor level for Motor 2
 - So on down through the 6th motor.
 
@@ -93,15 +93,17 @@ Once the device is in real time control mode, motor values can be set
 by writing 6 bytes to the Motor Control characteristic.
 
 Writing bytes to this characteristic spins up the motor for a short
-time, probably < 50ms. To keep a sustained pattern, update messages
-must be send frequently. It is currently unknown whether there is a
-device mode that will sustain commands.
+time, around ~80-85ms (note that this timing was derived experimentally,
+and may be slightly different from the actual application distributed
+by MysteryVibe). To keep a sustained pattern, update messages must be
+sent frequently. It is currently unknown whether there is a device
+mode that will sustain commands.
 
-To set all vibrators to top speed, the following packet can send to
+To set all vibrators to top speed, the following packet can be sent to
 the motor control characteristic:
 
 ```
-0xff 0xff 0xff 0xff 0xff 0xff
+0x64 0x64 0x64 0x64 0x64 0x64
 ```
 
 ## Things to figure out
