@@ -1,4 +1,4 @@
-# BKK Hardware
+# BKK
 
 BKK currently manufactures two pieces of hardware with bluetooth
 capabilities.
