@@ -33,51 +33,41 @@ These toys have GATT characteristics to mimic the RX/TX setup of the
 serial port style control of the old toys. The GATT service and
 characteristic IDs differ between different toy firmware versions.
 
-#### Version 1 Toys
+It's difficult to keep a current list of exact Lovense device names
+and service/characteristic UUIDs, as they tend to change rapidly on
+firmware updates. The following rules can be used for finding and
+connecting to Lovense toys.
 
-Names:
+Lovense toy names always start with "LVS-". What comes after that
+varies depending on when the toy was released. Early toys used names
+involving the single character identifier, like "LVS-A011", while
+newer toys use the full product name, like "LVS-Edge36". The last 2
+numbers denote the firmware version the toy is running.
 
-- LVS-A011 (Nora)
-- LVS-C011 (Nora)
-- LVS-B011 (Max)
-- LVS-L009 (Ambi)
+Lovense toys usually have one of 3 service ID formats:
 
-Service and Characteristic UUIDs: 
+```
+0000fff0-0000-1000-8000-00805f9b34fb
+6e400001-b5a3-f393-e0a9-e50e24dcca9e
+5X300001-002Y-4bd4-bbd5-a6920e4c5653
+```
 
-- **Service UUID (Max/Nora)**: 0000fff0-0000-1000-8000-00805f9b34fb
-- **RX Characteristic UUID (Max/Nora)**: 0000fff1-0000-1000-8000-00805f9b34fb
-- **TX Characteristic UUID (Max/Nora)**: 0000fff2-0000-1000-8000-00805f9b34fb
+The first two service IDs are static, and represent the service IDs
+used by first and second generation Lovense toys. The 3rd service ID
+can vary, with
 
-#### Version 2 Toys
+- X being any number 0x0-0xf
+- Y usually being 0x3 or 0x4
 
-Names:
+While some bluetooth APIs can wildcard services, others like
+WebBluetooth require an exact service UUID to connect. For these
+instances, it's recommended to just generate out all 32 variations of
+the last service, for a total of 34 services, to use with the
+optionalServices portion of a WebBluetooth connection filter.
 
-- LVS-S001 (Lush)
-- LVS-Z001 (Hush)
-
-- **Service UUID (All Others)**: 6e400001-b5a3-f393-e0a9-e50e24dcca9e
-- **TX Characteristic UUID (All Others)**: 6e400002-b5a3-f393-e0a9-e50e24dcca9e
-- **RX Characteristic UUID (All Others)**: 6e400003-b5a3-f393-e0a9-e50e24dcca9e
-
-#### Version 3 Toys
-
-Names:
-
-- LVS-P36 (Edge)
-
-- **Service UUID (All Others)**: 50300001-0024-4bd4-bbd5-a6920e4c5653
-- **TX Characteristic UUID (All Others)**: 50300002-0024-4bd4-bbd5-a6920e4c5653
-- **RX Characteristic UUID (All Others)**: 50300003-0024-4bd4-bbd5-a6920e4c5653
-
-#### Version 4 Toys
-
-Names:
-
-- LVS-Domi37 (Domi)
-
-- **Service UUID (All Others)**: 57300001-0023-4bd4-bbd5-a6920e4c5653
-- **TX Characteristic UUID (All Others)**: 57300002-0023-4bd4-bbd5-a6920e4c5653
-- **RX Characteristic UUID (All Others)**: 57300003-0023-4bd4-bbd5-a6920e4c5653
+To identify the type of toy after connecting, it is recommended to use
+the [DeviceType;](lovense.md#get-device-information) message, outlined
+below. This will return a device model identifier.
 
 ## Protocol
 
