@@ -26,15 +26,15 @@ names can be used for identification.
 
 ## Bluetooth Details
 
-Vorze toys uses Bluetooth LE to communicate with other machines. The
-main service UUID for the hardware is
+Vorze toys uses Bluetooth LE to communicate with other machines. 
+
+**Service UUID**
 
 ```
 40ee1111-63ec-4b7f-8ce7-712efd55b90e
 ```
 
-To send data to a unit, use the following characteristic ID
-
+**Write Data Characteristic UUID**
 ```
 40ee2222-63ec-4b7f-8ce7-712efd55b90e
 ```
