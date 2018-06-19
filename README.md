@@ -7,7 +7,7 @@
 
 STPIHKAL (pronouned stuff-eye-call): A Sex Robot Love Story
 
-Rendered version at [https://stpihkal.docs.buttplug.io/stpihkal](https://stpihkal.docs.buttplug.io/)
+Rendered version at [https://stpihkal.docs.buttplug.io/](https://stpihkal.docs.buttplug.io/)
 
 ## Introduction
 
