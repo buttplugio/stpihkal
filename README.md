@@ -42,7 +42,7 @@ and it is updated on every commit to master.
 
 If we're missing anything or you'd like to see documentation or
 something, [please file an
-issue](https://github.com/metafetish/stpihkal) and let us know!
+issue](https://github.com/buttplugio/stpihkal) and let us know!
 
 ## Support The Project
 
