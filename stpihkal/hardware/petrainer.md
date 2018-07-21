@@ -1,36 +1,31 @@
 # Petrainer Shock Collar
 
-## Introcuction
+## Introduction
 
 This document describes a way to control the
 [Petrainer PET998DRB Dog Training Collar](https://www.amazon.com/gp/product/B00W6UVROK/)  
 over 433Mhz-Band Radio Control.
-The information was provided by qdot?, who also wrote a python2 version of the attached control script. (still the one attached)
+The information was taken from the python2 code attached to this document, which was written by ???
 
 ## Communication via RF
 
 The Petrainer listens to OOK on a 434Mhz carrier wave.
 
-The RC-transmitted commands are encoded as
+The RC-transmitted commands are bitwise encoded as
 
 bit | pwm
 --- | ---
 0 | 1000
 1 | 1110
 
-The Zap command looks like
+I havent tried the code, as one of the libraries seems dead and also I don't have python2 installed.
 
-> 01000000 11011101 00101011 10010100 00111111 00
-> 0        8        F         ^^^^^^^
-
-where bits no 25:32 (7 bits starting at the 26th) are the zap intensity as a binary number between 0b0000000 and 0b1100100
-
-
-Uses RFCat. YardStickOne might also work...
+The provided code talks to an RFCat dongle, but a YardStickOne probably works as a drop-in-replacement.  
+I wonder if [this contraption](https://rurandom.org/justintime/w/Cheapest_ever_433_Mhz_transceiver_for_PCs) would work also.
 
 ## Commands
 
-Only the Shock funtion has been documented. The collar also has vibration and beeping capabilities which have not been documented so far.
+Only the Shock function has been documented. The collar also has vibration and beeping capabilities which have not been documented so far.
 
 Command | Description | Parameter
 --- | --- | ---
@@ -38,7 +33,12 @@ Zap | Issues a static shock of specified strength| 0-100, high is strong
 
 ## Protocol
 
-~~describe protocol on a bit level~~ done above. improve structure? Commands should come before the binary explaination, but C. via RF is in the right place. Move some of the content down?
+The Zap command looks like
+
+> 01000000 11011101 00101011 10010100 00111111 00
+> 0        8        F         ^^^^^^^
+
+where bits no 25:32 (7 bits starting at the 26th) are the zap intensity as a binary number between 0b0000000 and 0b1100100
 
 ## Python script
 
