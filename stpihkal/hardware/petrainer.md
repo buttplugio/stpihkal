@@ -37,7 +37,7 @@ The Zap command looks like
 
 ```
 01000000 11011101 00101011 10010100 00111111 00
-0        8        F         ^^^^^^^
+0        8       16         ^^^^^^^
 ```
 
 where bits no 25:32 (7 bits starting at the 26th) are the zap intensity as a binary number between 0b0000000 and 0b1100100
