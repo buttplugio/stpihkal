@@ -18,7 +18,7 @@ bit | pwm
 0 | 1000
 1 | 1110
 
-I havent tried the code, as one of the libraries seems dead and also I don't have python2 installed.
+I haven't tried the code, as one of the libraries seems dead and also I don't have python2 installed.
 
 The provided code talks to an RFCat dongle, but a YardStickOne probably works as a drop-in-replacement.  
 I wonder if [this contraption](https://rurandom.org/justintime/w/Cheapest_ever_433_Mhz_transceiver_for_PCs) would work also.
@@ -35,8 +35,10 @@ Zap | Issues a static shock of specified strength| 0-100, high is strong
 
 The Zap command looks like
 
-> 01000000 11011101 00101011 10010100 00111111 00
-> 0        8        F         ^^^^^^^
+```
+01000000 11011101 00101011 10010100 00111111 00
+0        8        F         ^^^^^^^
+```
 
 where bits no 25:32 (7 bits starting at the 26th) are the zap intensity as a binary number between 0b0000000 and 0b1100100
 
