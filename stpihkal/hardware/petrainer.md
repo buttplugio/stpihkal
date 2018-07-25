@@ -3,9 +3,12 @@
 ## Introduction
 
 This document describes a way to control the
-[Petrainer PET998DRB Dog Training Collar](https://www.amazon.com/gp/product/B00W6UVROK/)  
+[Petrainer PET998DRB Dog Training Collar](https://www.amazon.com/gp/product/B00W6UVROK/)
 over 433Mhz-Band Radio Control.
+
 Credit to [XMPPWocky](https://twitter.com/xmppwocky) for the proof of concept control code.
+
+All information in this document was taken from this code.
 
 ## Communication via RF
 
@@ -20,7 +23,7 @@ bit | pwm
 
 Each message send is preceded by a 5 pwm-bit long pulse (Likely to allow the receiver to set its gain), and every message is repeated 8 times, with pauses in between.
 
-The provided code talks to an RFCat dongle, but a YardStickOne probably works as a drop-in-replacement.  
+The provided code talks to an RFCat dongle. Other devices like a YardStickOne likely work with minimal modification.  
 I wonder if [this contraption](https://rurandom.org/justintime/w/Cheapest_ever_433_Mhz_transceiver_for_PCs) would work also.
 
 ## Commands
