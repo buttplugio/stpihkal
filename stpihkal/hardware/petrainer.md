@@ -18,7 +18,7 @@ bit | pwm
 0 | 1000
 1 | 1110
 
-Each message send is preceded by a 5 pwm-bit long high-signal, and every message is repeated 8 times, with pauses in between.
+Each message send is preceded by a 5 pwm-bit long pulse (Likely to allow the receiver to set its gain), and every message is repeated 8 times, with pauses in between.
 
 The provided code talks to an RFCat dongle, but a YardStickOne probably works as a drop-in-replacement.  
 I wonder if [this contraption](https://rurandom.org/justintime/w/Cheapest_ever_433_Mhz_transceiver_for_PCs) would work also.
@@ -115,15 +115,16 @@ def configure_rfcat(d):
 
 
 def tx_raw(d, raw, repeat=8):
-    """magic. I don't understand it.
+    """encodes message, precedes pulse, pads with silcence, sends 8x
 
     adds 00000000000000011111 in front of the encoded part
+    (silence, then a pulse) 
     and  000000000000000000000000 behind it.
-    Probably so the individual messages have a gap between them.
-    I think there is a better way to achieve this.
+    (silence)
 
-    I don't know why the signal goes high for five pwm-bits before each
-    transmission."""
+    I don't know exactly why the signal goes high for five pwm-bits
+    before each transmission.
+    It is likely there to allow the receiver to set its gain."""
     pwm = _raw_to_pwm(raw)
     tosend = bitstring.BitString(bytes=b"\x00\x01\xf0", length=(20)) \
         + pwm + bitstring.Bits(bytes=b"\x00\x00\x00")
