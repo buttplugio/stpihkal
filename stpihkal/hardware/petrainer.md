@@ -5,7 +5,7 @@
 This document describes a way to control the
 [Petrainer PET998DRB Dog Training Collar](https://www.amazon.com/gp/product/B00W6UVROK/)  
 over 433Mhz-Band Radio Control.
-The information was taken from the python2 code attached to this document, which was written by ???
+Credit to [XMPPWocky](https://twitter.com/xmppwocky) for the proof of concept control code.
 
 ## Communication via RF
 
@@ -50,16 +50,14 @@ The ported python3 script, which should work, provided rflib works with python3.
 Module for connecting to a Petrainer Shock Collar and sending commands
 
 This module implements a framework to send On-Off-Key-encoded messages
-over radio using rfcat, and a class that controls the collar's shock function.
+over radio using an rfcat dongle, and a class that controls the collar's shock function.
 
-The code was originally written by # TODO
-and was modified by definite_purple to hopefully work with python3.
+Credit to XMPPWocky (https://twitter.com/xmppwocky) for the proof of concept control code.
+It was modified by definite_purple to work with python3.
 Although she was not able to test it, because she doesn't have the hardware.
 
 rflib can be obtained here: https://bitbucket.org/eviljonny/rflib
 bitstring over pypi or here: https://github.com/scott-griffiths/bitstring
-
-The code in this form was written for the buttplugio/stpihkal github repo
 """
 
 
