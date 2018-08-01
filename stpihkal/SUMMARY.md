@@ -11,6 +11,7 @@
  * [Kiiroo Onyx 2](hardware/kiiroo-onyx-2.md)
  * [Lovense (All)](hardware/lovense.md)
  * [MysteryVibe Crescendo](hardware/mysteryvibe.md)
+ * [Petrainer Dog Training Collar](hardware/petrainer.md)
  * [Vibratissimo](hardware/vibratissimo.md)
  * [Vorze SA (A10 Cyclone SA, UFO SA)](hardware/vorze-sa.md)
 * Firmware and Bootloaders
