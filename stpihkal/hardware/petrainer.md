@@ -24,7 +24,7 @@ bit | pwm
 Each message send is preceded by a 5 pwm-bit long pulse (Likely to allow the receiver to set its gain), and every message is repeated 8 times, with pauses in between.
 
 The provided code talks to an RFCat dongle. Other devices like a YardStickOne likely work with minimal modification.  
-I wonder if [this contraption](https://rurandom.org/justintime/w/Cheapest_ever_433_Mhz_transceiver_for_PCs) would work also.
+DIY solutions like [this](https://rurandom.org/justintime/w/Cheapest_ever_433_Mhz_transceiver_for_PCs) might also work.
 
 ## Commands
 
