@@ -39,14 +39,14 @@ Light | Lights an LED  | 0
 
 The Commands looks like
 
-Channel | L.A.V.S. | Remote ID | Intensity | Checksum
---- | --- | --- | --- | ---
-1000 | 0001 | 11001010 00011010 | 00000000 | 01111110 0
-0 | | 8 | 24 | 32
+Channel | L.A.V.S. | Remote ID | Intensity | Checksum | ?
+--- | --- | --- | --- | --- | ---
+1000 | 0001 | 11001010 00011010 | 00000000 | 01111110 | 0
+0 | | 8 | 24 | 32 | 40
 
 Bits | Purpose
 --- | ---
-0~3 | Channel
+0~3 | Channel, for addressing the individual collars
 4 | Light
 5 | Audio
 6 | Vibration
