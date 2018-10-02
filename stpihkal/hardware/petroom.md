@@ -53,7 +53,7 @@ Bits | Purpose
 7 | Shock
 8~23 | Remote Serial no.
 24~31 | Level, starting with most significant bit
-32~39 | Checksum, bits o~7 in reverse order and flipped
+32~39 | Checksum, bits 0~7 in reverse order and flipped
 40 | Always zero, unimplemented control bit?
 
 ## Arduino sketch
