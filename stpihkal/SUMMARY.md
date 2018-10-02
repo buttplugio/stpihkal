@@ -12,6 +12,7 @@
  * [Lovense (All)](hardware/lovense.md)
  * [MysteryVibe Crescendo](hardware/mysteryvibe.md)
  * [Petrainer Dog Training Collar](hardware/petrainer.md)
+ * [PetRoom Dog Training Collar](hardware/petroom.md)
  * [Sportdog SD-400 Collar](hardware/sportdog-sd400.md)
  * [Vibratissimo](hardware/vibratissimo.md)
  * [Vorze SA (A10 Cyclone SA, UFO SA)](hardware/vorze-sa.md)
