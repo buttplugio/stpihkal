@@ -39,10 +39,10 @@ Light | ??? | 0 ??? Possibly a test function? The listing mentions an accessory 
 
 The Commands looks like
 
-```
-10000001 11001010 00011010 00000000 01111110 0
-0        8       16       24       32       40
-```
+Channel | L.A.V.S. | Remote ID | Intensity | Checksum
+--- | --- | --- | --- | ---
+1000 | 0001 | 11001010 00011010 | 00000000 | 01111110 0
+0 | | 8 | 24 | 32
 
 Bits | Purpose
 --- | ---
