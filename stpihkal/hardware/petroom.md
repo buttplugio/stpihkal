@@ -4,13 +4,13 @@
 
 This document describes a way to control the
 [PetRoom Dog Training Collar](https://www.ebay.co.uk/itm/323301551683)
-over 433Mhz-Band Radio Control.???
+over 433Mhz-Band Radio Control.
 
-Credit to [MiscReader](???) for the reversing work and code.
+Credit to MiscReader for the reversing work and code.
 
 ## Communication via RF
 
-The PetRoom listens to OOK on a carrier wave of 433~825Mhz.???
+The PetRoom listens to OOK on a carrier wave of 433Mhz, listed as 433~825Mhz in the offer.
 
 The RC-transmitted commands are bitwise encoded as
 
@@ -32,8 +32,8 @@ Command | Description | Parameter
 --- | --- | ---
 Shock | Issues a static shock of specified strength| 0-100, high is strong
 Vibration | Vibrates the collar | 0-100
-Audio | Beeps | 0 ??? Does it have an intensity?
-Light | ??? | 0 ??? Possibly a test function? The listing mentions an accessory to test the function of the collar
+Audio | Beeps | 0, no effect on intensity
+Light | Lights an LED  | 0
 
 ## Protocol
 
