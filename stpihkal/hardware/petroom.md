@@ -10,7 +10,7 @@ Credit to [MiscReader](???) for the reversing work and code.
 
 ## Communication via RF
 
-The PetRoom listens to OOK on a carrier wave of 433~825Mhz, depending on the devices serial no.???
+The PetRoom listens to OOK on a carrier wave of 433~825Mhz.???
 
 The RC-transmitted commands are bitwise encoded as
 
@@ -19,7 +19,7 @@ bit | pwm
 0 | 1000
 1 | 1110
 
-Each message send is preceded by a 6 pwm-bit long pulse (Likely to allow the receiver to set its gain) and 3 pwm-bit long low.  
+Each message sent is preceded by a 6 pwm-bit long pulse (Likely to allow the receiver to set its gain) and 3 pwm-bit long low.  
 Each message is repeated 4 times.
 
 The provided code runs on an Arduino with a serial pin connected to an RF-Module.
@@ -31,9 +31,9 @@ All the functionality of the device has been documented.
 Command | Description | Parameter
 --- | --- | ---
 Shock | Issues a static shock of specified strength| 0-100, high is strong
-Vibration | Vibrates the collar | 0-100 ???
-Audio | Beeps | 0 ???
-Light | ??? | 0 ???
+Vibration | Vibrates the collar | 0-100
+Audio | Beeps | 0 ??? Does it have an intensity?
+Light | ??? | 0 ??? Possibly a test function? The listing mentions an accessory to test the function of the collar
 
 ## Protocol
 
