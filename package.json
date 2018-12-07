@@ -20,6 +20,6 @@
     "gitbook-cli": "^2.3.2"
   },
   "dependencies": {
-    "gitbook-plugin-piwik": "^0.2.1"
+    "gitbook-plugin-piwik": "git+https://github.com/qdot/gitbook-plugin-piwik",
   }
 }
