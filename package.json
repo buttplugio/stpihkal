@@ -3,23 +3,22 @@
   "version": "0.1.0",
   "description": "Sex Toy Protocols I Have Known And Loved",
   "scripts": {
-    "build": "gitbook build"
+    "dev": "vuepress dev stpihkal",
+    "build": "vuepress build stpihkal"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/metafetish/stpihkal.git"
+    "url": "git+https://github.com/buttplugio/stpihkal.git"
   },
   "author": "Kyle Machulis <kyle@machul.is>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/metafetish/stpihkal"
+    "url": "https://github.com/buttplugio/stpihkal/issues"
   },
-  "homepage": "https://github.com/metafetish/stpihkal",
-  "devDependencies": {
-    "gitbook": "^3.2.3",
-    "gitbook-cli": "^2.3.2"
-  },
+  "homepage": "https://stpihkal.docs.buttplug.io",
   "dependencies": {
-    "gitbook-plugin-piwik": "git+https://github.com/qdot/gitbook-plugin-piwik",
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.0",
+    "vuepress": "^1.0.0-alpha.31",
+    "yarn": "^1.12.3"
   }
 }
