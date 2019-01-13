@@ -52,7 +52,7 @@ module.exports = {
   },
   plugins: [
     [
-      "stpihkal/.vuepress/plugin-matomo",
+      "vuepress-plugin-matomo",
       {
         'siteId': 8,
         'trackerUrl': "https://matomo.nonpolynomial.com/"
