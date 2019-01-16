@@ -50,6 +50,7 @@ module.exports = {
         ]
       },
     ],
+    repo: 'buttplugio/stpihkal',
   },
   plugins: [
     [
