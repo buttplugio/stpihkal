@@ -1,4 +1,5 @@
 // .vuepress/config.js
+let date = new Date().toJSON();
 module.exports = {
   themeConfig: {
     sidebar: [
@@ -59,5 +60,24 @@ module.exports = {
       }
     ],
     "@vuepress/plugin-back-to-top"
+  ],
+  evergreen: true,
+  title: "STPIHKAL: Sex Toy Protocols I Have Known And Loved",
+  description: "Documentation of sex toy and intimate hardware control protocols, firmware details, file formats, and other proprietary specifications.",
+  head: [
+    ['link', { rel: 'icon', href: '/buttplug.svg' }],
+    ["meta", {property: "og:type", content:"website"}],
+    ["meta", {property: "og:title", content:"STPIHKAL: Sex Toy Protocols I Have Known And Loved"}],
+    ["meta", {property: "og:url", content:"https://stpihkal.docs.buttplug.io"}],
+    ["meta", {property: "og:site_name", content:"STPIHKAL: Sex Toy Protocols I Have Known And Loved"}],
+    ["meta", {property: "og:description", content:"Documentation of sex toy and intimate hardware control protocols, firmware details, file formats, and other proprietary specifications."}],
+    ["meta", {property: "og:locale", content:"default"}],
+    ["meta", {property: "og:image", content:"https://stpihkal.docs.buttplug.io/buttplug-logo-opengraph.png"}],
+    ["meta", {property: "og:updated_time", content:date}],
+    ["meta", {name:"twitter:card", content:"summary"}],
+    ["meta", {name:"twitter:title", content:"STPIHKAL: Sex Toy Protocols I Have Known And Loved"}],
+    ["meta", {name:"twitter:description", content:"Documentation of sex toy and intimate hardware control protocols, firmware details, file formats, and other proprietary specifications."}],
+    ["meta", {name:"twitter:image", content:"https://stpihkal.docs.buttplug.io/buttplug-logo-opengraph.png"}],
+    ["meta", {name:"twitter:creator", content:"@buttplugio"}],
   ]
 };
