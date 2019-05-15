@@ -196,6 +196,163 @@ _Return Example_
 OK;
 ```
 
+#### Configure Toy Settings
+
+There are settings configurable through the Lovense Remote 
+application which have read and write commands. 
+
+##### AutoSwith
+
+Configures options labelled as follows in Lovense Remote:
+
+- Turn off the toy when there is an accidental bluetooth disconnection
+- Toy will go to last level when it reconnects 
+
+Note both options are marked Beta. "Turn off" appears to mean disable vibration.
+
+The read command returns 0 or 1; the write command accepts "Off" and "On".
+
+_Availability:_ All toys? Confirmed: Domi, Hush, Lush 2
+
+_Command Format_
+```
+GetAS;
+```
+
+Read "AutoSwith" options.
+
+_Return Example_
+```
+AutoSwith:0:1;
+```
+
+Indicates "turn off on disconnect" disabled; 
+"last level on reconnect" enabled.
+
+_Command Format_
+```
+AutoSwith:On:Off;
+```
+
+Set AutoSwith features to On and Off, respectively.
+
+_Return Example_
+```
+OK;
+```
+
+##### Light
+
+Labelled "Enable/Disable LED" in Lovense Remote. Not shown
+in Lovense Remote for Domi.
+
+Controls power/connection LED.
+
+The read command returns 0 or 1; the write command accepts "off" and "on".
+
+_Availability:_ All toys? Confirmed: Domi, Hush, Lush 2
+
+_Command Format_
+```
+GetLight;
+```
+
+Read Light setting.
+
+_Return Example_
+```
+Light:1;
+```
+
+LED enabled
+
+_Command Format_
+```
+Light:off;
+```
+
+Disable power/connection LED
+
+_Return Example_
+```
+OK;
+```
+
+##### ALight
+
+Labelled "Enable/Disable Lights" in Lovense Remote.
+
+_Availability:_ Domi
+
+Controls ring of white LEDs on Domi.
+
+The read command returns 0 or 1; the write command accepts "Off" and "On".
+
+_Command Format_
+```
+GetAlight;
+```
+
+Read ALight setting.
+
+_Return Example_
+```
+Alight:1;
+```
+
+Lights enabled
+
+*Important:* note different capitalization between read and write commands
+
+_Command Format_
+```
+ALight:Off;
+```
+
+Disable lights or power LED
+
+_Return Example_
+```
+OK;
+```
+
+#### Preset Levels
+
+The Domi allows customization of the low, medium, and high levels 
+selectable using the hardware buttons. The raw levels are the 
+same integer values used for the Vibrate command.
+
+_Availability:_ Domi
+
+_Command Format_
+```
+GetLevel;
+```
+
+Fetch configured levels.
+
+_Return Example_
+```
+1,9,20;
+```
+
+Vibration levels. Indicates 1 for low, 9 for medium, 20 for high. 
+This is the factory default.
+
+_Command Format_
+```
+SetLevel:3:16;
+```
+
+Set High to level 16. 1, 2, and 3 as the first argument refer to 
+low, medium, and high, respectively.
+
+_Return Example_
+```
+OK;
+```
+
+
 #### Start Accelerometer Data Stream
 
 Starts a stream of accelerometer data. Will send constantly until stop
