@@ -53,19 +53,19 @@ the vibration for each motor separately is via the physical dials.
 | `0x45` | `'E'` | Same as `0x44` (`'D'`).
 | `0x46` | `'F'` | Causes the digital control to reboot. Turns off all vibrations for five seconds before it switches the vibration to the stored setting. After reconnecting via Bluetooth, further commands can be sent to the digital control.
 | `0x61` | `'a'` | Sets the vibration to the lowest level (1).
-| `0x62` | `'b'` | Sets the vibration to the level 2.
-| `0x63` | `'c'` | Sets the vibration to the level 3.
-| `0x64` | `'d'` | Sets the vibration to the level 4.
-| `0x65` | `'e'` | Sets the vibration to the level 5.
-| `0x66` | `'f'` | Sets the vibration to the level 6.
-| `0x67` | `'g'` | Sets the vibration to the level 7.
-| `0x68` | `'h'` | Sets the vibration to the level 8.
-| `0x69` | `'i'` | Sets the vibration to the level 9.
-| `0x6A` | `'j'` | Sets the vibration to the level 10.
-| `0x6B` | `'k'` | Sets the vibration to the level 11.
-| `0x6C` | `'l'` | Sets the vibration to the level 12.
-| `0x6D` | `'m'` | Sets the vibration to the level 13.
-| `0x6E` | `'n'` | Sets the vibration to the level 14.
+| `0x62` | `'b'` | Sets the vibration level to 2.
+| `0x63` | `'c'` | Sets the vibration level to 3.
+| `0x64` | `'d'` | Sets the vibration level to 4.
+| `0x65` | `'e'` | Sets the vibration level to 5.
+| `0x66` | `'f'` | Sets the vibration level to 6.
+| `0x67` | `'g'` | Sets the vibration level to 7.
+| `0x68` | `'h'` | Sets the vibration level to 8.
+| `0x69` | `'i'` | Sets the vibration level to 9.
+| `0x6A` | `'j'` | Sets the vibration level to 10.
+| `0x6B` | `'k'` | Sets the vibration level to 11.
+| `0x6C` | `'l'` | Sets the vibration level to 12.
+| `0x6D` | `'m'` | Sets the vibration level to 13.
+| `0x6E` | `'n'` | Sets the vibration level to 14.
 | `0x6F` | `'o'` | Sets the vibration to the highest level (15).
 | `0x70` | `'p'` | Turns off the vibration (level 0).
 
