@@ -15,7 +15,7 @@ box can also be controlled via Bluetooth using the official
 ## Bluetooth details
 
 When paired with a system via Bluetooth 2.0, the digital control box
-identifies itself as “Nobra Control” and exposes two serial ports,
+identifies itself as “`Nobra Control`” and exposes two serial ports,
 COM4 and COM5. However, only COM5 can be used to control the toy.
 
 ## Protocol
@@ -46,7 +46,7 @@ the vibration for each motor separately is via the physical dials.
 
 | Byte | Char | Result |
 | ------ | ----- | ----------- |
-| `0x41` | `'A'` | The digital control will return its identifier as five bytes: “NoBra” (`4E 6F 42 72 61`).
+| `0x41` | `'A'` | The digital control will return its identifier as five bytes: `NoBra` (`4E 6F 42 72 61`).
 | `0x42` | `'B'` | Puts the digital control into a “frozen” state: The vibration stays at the current level and any further Bluetooth commands or physical button presses are ignored until the power is turned off and on again.
 | `0x43` | `'C'` | Same as `0x42` (`'B'`).
 | `0x44` | `'D'` | The digital control responds with the following 36 bytes: ``dpAabcdcbapNOdpRdpFGHIJKLMNO_`dpAphd`` (`64 70 41 61 62 63 64 63 62 61 70 4E 4F 64 70 52 64 70 46 47 48 49 4A 4B 4C 4D 4E 4F 5F 60 64 70 41 70 68 64`)
