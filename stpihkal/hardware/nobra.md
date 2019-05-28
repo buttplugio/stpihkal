@@ -15,7 +15,7 @@ box can also be controlled via Bluetooth using the official
 ## Bluetooth details
 
 When paired with a system via Bluetooth 2.0, the digital control box
-identifies itself as “`Nobra Control`” and exposes two serial ports,
+identifies itself as `Nobra Control` and exposes two serial ports,
 COM4 and COM5. However, only COM5 can be used to control the toy.
 
 ## Protocol
