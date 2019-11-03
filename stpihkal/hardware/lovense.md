@@ -479,6 +479,23 @@ _Return Example_
 OK;
 ```
 
+#### Get Production Batch Number
+
+Returns the production batch number for this device.
+This digits appear to correspond to a `YYMMDD` date during manufacture.
+
+_Availability:_ All toys? Confirmed: Lush 2, Hush, Domi.
+
+_Command Format_
+```
+GetBatch;
+```
+
+_Return Example_
+```
+190124;
+```
+
 ## Related Projects and Links
 
 The applications and repositories below contain implementations of the
