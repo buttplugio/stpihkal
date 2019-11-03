@@ -479,6 +479,72 @@ _Return Example_
 OK;
 ```
 
+#### Count Programmed Patterns
+
+List the indexes of the patterns that are currently programmed into
+the device. The maximum number of patterns in 10, so each index will
+always be a single digit.
+
+_Availability:_ Lush 2, Domi
+
+_Command Format_
+```
+GetPatten;
+```
+
+_Return Example_
+```
+P:01234;
+```
+
+This return tells us that there are currently five patterns programmed
+on the device, with indicies 0 through 4.
+
+#### View Programmed Pattern
+
+Returns a pattern that is currently programmed into the device.
+
+Each pattern is represented as a series of digits from 0 to 9, each
+indicating the vibration level for one half-second of the pattern.
+(This is different than the 0-20 scale used by the Vibrate command.)
+
+The response is split into multiple messages, each containing up to
+12 digits (6 seconds). Each response has a prefix indicating the
+pattern index, the number of parts in the response, and the index of
+the response.
+
+For the Domi, the pattern length must be between 5 and 50 seconds, so
+the response will use a maximum of 9 messages, so the part count and
+indicies will always be a single digit.
+
+For the Lush 2, the part count and indicies are padded to always use
+two digits.
+
+_Availability:_ Lush 2, Domi
+
+_Command Format_
+```
+GetPatten:4;
+```
+
+Domi response using one-digit part indices:
+
+_Return Example_
+```
+P4:1/5:000042003720;
+P4:2/5:000002436658;
+P4:3/5:997339993001;
+P4:4/5:291111115111;
+P4:5/5:1110000000;
+```
+
+Lush 2 response using two-digit part indices:
+
+_Return Example_
+```
+P4:01/01:346797643;
+```
+
 ## Related Projects and Links
 
 The applications and repositories below contain implementations of the
