@@ -545,6 +545,26 @@ _Return Example_
 P4:01/01:346797643;
 ```
 
+#### Run Programmed Patern
+
+Starts running a programmed pattern on a loop. Takes an positive
+integer pattern index to start running it, or 0 to stop running the pattern.
+
+While Domi is able to take any pattern index, from 0 to 10, Lush 2 only seems
+to be able to take indices from 0 to 4. Other toys have not been tested.
+
+_Availability:_ Lush, Hush, Ambi, Domi, Edge, Osci
+
+_Command Format_
+```
+Preset:8;
+```
+
+_Return Example_
+```
+OK;
+```
+
 ## Related Projects and Links
 
 The applications and repositories below contain implementations of the
