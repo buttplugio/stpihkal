@@ -49,15 +49,16 @@ Lovense toys usually have one of 3 service ID formats:
 ```
 0000fff0-0000-1000-8000-00805f9b34fb
 6e400001-b5a3-f393-e0a9-e50e24dcca9e
-5X300001-002Y-4bd4-bbd5-a6920e4c5653
+XY300001-002Z-4bd4-bbd5-a6920e4c5653
 ```
 
 The first two service IDs are static, and represent the service IDs
 used by first and second generation Lovense toys. The 3rd service ID
 can vary, with
 
-- X being any number 0x0-0xf
-- Y usually being 0x3 or 0x4
+- X usually being 0x4 or 0x5
+- Y being any number 0x0-0xf
+- Z usually being 0x3 or 0x4
 
 While some bluetooth APIs can wildcard services, others like
 WebBluetooth require an exact service UUID to connect. For these
