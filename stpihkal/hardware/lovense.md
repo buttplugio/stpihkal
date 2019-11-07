@@ -423,6 +423,34 @@ _Return Example_
 OK;
 ```
 
+#### Set Rotation Speed and Direction
+
+Sets the rotation speed and direction at once. Takes integers values from 0-20.
+
+_Availability_: Nora
+
+```
+RotateClockwise:10;
+```
+
+Sets rotation direction to clockwise and speed to 10 (50%).
+
+_Return Example_
+```
+OK;
+```
+
+```
+RotateAntiClockwise:2;
+```
+
+Sets rotation direction to anti-clockwise and speed to 2 (10%).
+
+_Return Example_
+```
+OK;
+```
+
 #### Set Absolute Air Level
 
 Changes the inflation level of the Max toy. Takes integer values from 0-5.
