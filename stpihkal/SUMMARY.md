@@ -11,6 +11,7 @@
  * [Kiiroo Onyx 2](hardware/kiiroo-onyx-2.md)
  * [Lovense (All)](hardware/lovense.md)
  * [MysteryVibe Crescendo](hardware/mysteryvibe.md)
+ * [Nobra](hardware/nobra.md)
  * [Petrainer Dog Training Collar](hardware/petrainer.md)
  * [PetRoom Dog Training Collar](hardware/petroom.md)
  * [Sportdog SD-400 Collar](hardware/sportdog-sd400.md)
