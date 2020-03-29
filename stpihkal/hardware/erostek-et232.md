@@ -242,3 +242,10 @@ be necessary to remove power from the device in order to reset it.
 
 When set, the corresponding inputs are ignored, and levels can be
 set in software by writing to addresses 88..8C above.
+
+### $D3 - Auto Power Off Timer
+
+This timer controls the automatic power off function of the Erostek ET232
+and possibly other Erostek units.  To prevent
+auto shutdown after ~60 minutes, this timer needs to be periodically
+reset to 0.  Simply write a 0 to this register to reset the timer.
