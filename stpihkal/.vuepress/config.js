@@ -11,6 +11,7 @@ module.exports = {
           "/hardware/erostek-et232.md",
           "/hardware/erostek-et312b.md",
           "/hardware/estim-systems-2b.md",
+          "/hardware/f-machine.md",
           "/hardware/fleshlight-launch.md",
           "/hardware/kiiroo-onyx-pearl-1.md",
           "/hardware/kiiroo-onyx-2.md",
