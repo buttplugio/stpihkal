@@ -6,6 +6,7 @@
  * [Erostek ET232](hardware/erostek-et232.md)
  * [Erostek ET312B](hardware/erostek-et312b.md)
  * [Estim Systems 2B](hardware/estim-systems-2b.md)
+ * [F-machine](hardware/f-machine.md)
  * [Fleshlight Launch](hardware/fleshlight-launch.md)
  * [Kiiroo Onyx 1/Pearl 1](hardware/kiiroo-onyx-pearl-1.md)
  * [Kiiroo Onyx 2](hardware/kiiroo-onyx-2.md)
