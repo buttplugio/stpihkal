@@ -18,6 +18,7 @@ module.exports = {
           "/hardware/lovense.md",
           "/hardware/mysteryvibe.md",
           "/hardware/nobra.md",
+          "/hardware/oriori-ball.md",
           "/hardware/petrainer.md",
           "/hardware/petroom.md",
           "/hardware/sportdog-sd400.md",
