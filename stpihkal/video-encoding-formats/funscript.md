@@ -2,7 +2,7 @@
 * File ending: `.funscript`
 * Format: JSON
 
-Funscript file are the preferred file format of the scriping community on [EroScripts](https://discuss.eroscripts.com) (previously known as [RealTouchScripts](https://realtouchscripts.com/)). They can also be purchased from marketplaces like [RealSync](https://realsync.us) (previously known as SyncArmy) and [SexLikeReal](https://www.sexlikereal.com/tags/interactive-sex-toys-vr).
+Funscript file are the preferred file format of the scriping community on [EroScripts](https://discuss.eroscripts.com) (previously known as [RealTouchScripts](https://realtouchscripts.com/)). They can also be purchased from marketplaces like [RealSync](https://realsync.us) (previously known as SyncArmy) and [SexLikeReal](https://www.sexlikereal.com/tags/interactive-sex-toys-vr). In addition, they are included with the subscription to the [CzechVR network](https://www.czechvrnetwork.com/tag-teledildonics) for all videos with the Teledildonics tag.
 
 In order to be recognized by script players, `.funscript` files must be placed in the same directory and must match the name of the corresponding video file, e.g. `my-video.mp4` and `my-video.funscript`.
 
