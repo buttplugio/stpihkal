@@ -29,4 +29,5 @@ The script positions are stored under `actions`, where `pos` is an integer from 
       "at": 3000
     }
   ]
-  ```
+}
+```
