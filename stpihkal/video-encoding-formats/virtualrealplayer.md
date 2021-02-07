@@ -2,7 +2,7 @@
 * File ending: `.txt`
 * Format: INI
 
-VirtualRealPlayer was a video player of the [VirtualRealPorn network](https://virtualrealporn.com/). First launched in [September 2015](http://web.archive.org/web/20170812145448/http://support.virtualrealporn.com/hc/en-us/articles/115001905109-VirtualRealPlayer-for-Windows-Release-History), it could be used to control the Lovense Max & Nora and Kiiro's Onyx & Pearl toys from Windows desktop computers.
+VirtualRealPlayer was a video player of the [VirtualRealPorn network](https://virtualrealporn.com/). First launched in [September 2015](http://web.archive.org/web/20170812145448/http://support.virtualrealporn.com/hc/en-us/articles/115001905109-VirtualRealPlayer-for-Windows-Release-History), it could be used to control the Lovense Max & Nora and Kiiroo's Onyx & Pearl toys from Windows desktop computers.
 
 As of May 2019, the VirtualRealPlayer has been discontinued, with the company now recommending other video players like DeoVR, Skybox VR, WatchVR and the SteamVR Media Player; however, these video players do not have teledildonics support. Teledildonics support is now only available for Android and iOS devices through the FeelConnect ecosystem.
 
