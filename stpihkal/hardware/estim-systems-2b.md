@@ -35,10 +35,10 @@ AAA:BB:CC:DD:EE:F:G:H:II
 ```
 
 * AAA - Battery Level
-* BB - Channel A Level
-* CC - Channel B Level
-* DD - Channel C Setting
-* EE - Channel D Setting
+* BB - Channel A Level x2, i.e. value is twice what is set via commands and is displayed on the LCD
+* CC - Channel B Level x2
+* DD - Channel C Setting x2
+* EE - Channel D Setting x2
 * F - Current [Mode](#modes)
 * G - Power Setting (L or H)
 * H - Channel A/B Joined? (0 or 1)
