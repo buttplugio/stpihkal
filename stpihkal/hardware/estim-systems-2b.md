@@ -51,7 +51,7 @@ AAA:BB:CC:DD:EE:F:G:H:II
 | Axx | Sets Channel A Power % to xx. Range is 0 to 100, i.e. A50 sets Channel A to 50% |
 | Bxx | Sets Channel B Power % to xx. Range is 0 to 100 |
 | Cxx | Sets Channel C Setting to xx. Range is 2 to 100 |
-| Dxx | Sets Channel D Setting to xx. Range is 2 to 100 |
+| Dxx | Sets Channel D Setting to xx. Range is 1 to 100 |
 | E   | Set all Channels to defaults (A/B: 0%, C/D: 50, Mode: Pulse) |
 | H   | Switch to High Power Mode, turns A/B back to 0% |
 | J   | Join Channels A/B. A is master. |
