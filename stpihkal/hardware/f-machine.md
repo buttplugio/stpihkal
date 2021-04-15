@@ -14,58 +14,48 @@ The following three parameters can be controlled remotely:
 
 The stroke length can only be adjusted via a screw on the machine itself while power is turned off, and is not controllable remotely.
 
+The manufacturer indicates multiple types of remotes (type 'A' to 'E'). This document refers to the 'A' remotes. It is possible that the other versions use different messages, as well as an entire RF stack entirely.
+
 **Note:** The Tremblr has a fan which is always running as long as the hardware power switch is turned on, even while the motor itself is not moving. This produces a continuous white noise level. When designing long-running applications (e.g. an alarm clock), you may need a Smart Plug to turn the power on or off remotely, in addition to the infrastructure for sending commands to the toy.
 
 ## From radio to bits
 
-The remote control uses a carrier frequency of 314.965 MHz and the signal is modulated with Amplitude-shift keying (ASK).
+The remote control uses a carrier frequency of 314.965 MHz and the signal is modulated with OOK (On/Off Keying), using a [SC2262](https://datasheet.lcsc.com/szlcsc/PT2262_C16390.pdf) encoder that sends tri-states bits (1/0/F) as fixed code commands.
 
-The actual signal is sent at roughly 3,562 Hz from the carrier frequency. Each bit is transmitted for roughly 1.72ms, and the amplitude is encoded in Differential Manchester:
+Libraries are readily available to emulate the commands to be sent over 315Mhz:
 
-- **on** (`1`): Full amplitude for 79% of the time, followed by no signal for the remaining 21%.
-- **off** (`0`): Full amplitude for 33% of the time, followed by no signal for the remaining 67%.
-- **silence** (`S`): No signal for the entire time.
+ * [rc-switch](https://github.com/sui77/rc-switch) for Arduino
+ * [rpi-rf](https://github.com/milaq/rpi-rf) to use with RPi GPIO (in Python)
 
-Each message is 32 bits long, with the actual data sent in 25 bits, followed by 7 bits of total silence. Therefore, the protocol allows sending around 18 messages per second.
 
 ## Message structure
 
-Each message starts with a 12 bit header:
+Each command is encoded as a 12 bits message, plus a synchronization pulse. Each bit is encoded as a 2 pulses cycle:
+
+ * Bit '0': `2*(short high, long low)`
+ * Bit '1': `2*(long high, short low)`
+ * But 'F' (floating): `short high, long low, long high, short low`
+
+A 'short' duration is 4 times the 2262 chip's clock, while a long one is 12 times the clock.
 
 ```plaintext
-1 1 1 1
-0 1 0 1
-0 1 0 1
+            __        __
+Bit '0' : _|  |______|  |______
+            ______    ______
+Bit '1' : _|      |__|      |__
+            __        ______
+Bit 'F' : _|  |______|      |__
 ```
 
-The following 12 bits are the payload and describe which buttons are pressed; each buttons is sent as two bits. The first button is unused and is always sent as `0 0`. For the remaining buttons, if the button is pressed, `1 1` is sent, otherwise `0 0` is sent. Note that on the Gigolo, `suction_inc` and `suction_dec` will always be `0 0`.
+A Sync bit needs to be transmitted to complete the command. It is a 4 bits long (128 clocks) pulse, with a high state for 4 clocks, and then kept to low for the rest of the 128 clocks duration.
 
-```plaintext
-0 0        suction_inc
-speed_inc  speed_dec
-power      suction_dec
-```
-
-Finally, a `0` bit is sent to terminate the message, followed by 7 bits of total silence before the next message can be sent:
-
-```plaintext
-0 S S S
-S S S S
-```
+While the datasheet of the reciever chip (2272) indicates that 2 valid and identical commands needs to be recieved before the operation is acted upon, it seems that most implementation will repeat the command betweetn 8 to 15 times.
 
 ## Buttons
-
-Note that a button has to pressed (encoded as `1 1`) for 8 consecutive messages in order to have an effect. Sending the button press for longer than 8 messages may increase the effect (see the following sections for details).
-
-When a button press is no longer being sent, even if for just a single message and then pressed again, it will count as a new button press.
-
-Keep in mind that we are assuming ideal connectivity. In reality, messages may be ignored by the machine and there is no acknowledgement built into the protocol. Also, the protocol is not idempotent; you cannot safely send a message a second time without causing potential side effects. Any application should be written with the assumption that some messages might randomly be dropped and ignored by the machine. Additional tracking sensors, e.g. visually (via camera) or spatially (via VR trackers), might be required to confirm message receipt.
 
 ### `power`
 
 This button starts or stops the movement, depending on whether the machine is moving already.
-
-The button is only considered pressed if it is sent for 8 or more consecutive messages. Any additional messages after the first 8 have no additional effect. In order to send a second button press (e.g. turn power off after turning it on) at least one message without a button press must be sent, or some silence. To increase reliability, send 15 messages which allows for a message at the start or end to be dropped, without being able to send a second command.
 
 Note that the same message is sent for starting and stopping, therefore, an application cannot reliably put the machine in the moving or stopped state. Additional sensors might be required to detect movement. Alternatively, when using a Smart Plug you could cut power to the machine and then restore power, which will put the machine in the "not moving, at speed 1" state.
 
@@ -122,6 +112,8 @@ Also, keep in mind that while the absolute speed differences stay the same, the 
 
 #### Amount of step changes based on number of messages
 
+Because of the required "repetition" of commands to ensure the message is being received by the device, there is a risk that sending N times the message "Speed UP" results in the motor speed being increase more than once.
+
 We measured the effect of sending more than 9 messages to the Tremblr to figure out if it is worth sending a longer button press instead of sending multiple 8-message long button presses. Based on our measurements, there is non-determinism when sending 16- to 22-message long button presses. These results showed up across multiple measurements, which rules out connectivity errors. Therefore, we recommend sticking with at most 15 messages for accurate speed control.
 
 The following table contains our results, namely by how many steps the speed did change based on for how many messages the button press was sent. We used the methodology of always putting the machine in the slowest speed first, and then sending speed increase messages.
@@ -147,51 +139,39 @@ These two buttons, only applicable to the Tremblr, change the amount of air in c
 
 More specifically, these buttons control two valves which will either let more air in, or remove air. The valves are opened when at least 8 messages are sent, and stay open as long as the button press keeps being sent.
 
-## Example messages
+## List of messages
 
-Here are two example messages.
+### Tremblr (A remote)
 
-### Power toggle
+ * Speed Up: `11FFFF001000`
+ * Start/Stop: `11FFFF000010`
+ * Speed Down: `11FFFF000100`
+ * Suction Down: `11FFFF000001`
+ * Suction Up: `11FFFF010000`
 
-In this example, the power button is pressed, resulting in the following message:
+### Gigolo (A remote)
 
-```plaintext
-1 1 1 1
-0 1 0 1
-0 1 0 1
+ * Speed Up: `11FFFF001000`
+ * Speed Down: `FFFFF1110010`
+ * Start/Stop: `FFFFF1110100`
 
-0 0 0 0
-0 0 0 0
-1 1 0 0
-
-0 S S S
-S S S S
-```
-
-### Speed increase and suction decrease
-
-Multiple buttons can be pressed at the same time. When the speed increase and suction decrease button is pressed, the following message is sent:
-
-```plaintext
-1 1 1 1
-0 1 0 1
-0 1 0 1
-
-0 0 0 0
-1 1 0 0
-0 0 1 1
-
-0 S S S
-S S S S
-```
 
 ## Hardware for sending RF signals
 
 For sending RF signals from a computer, you need a RF device and an antenna. When shopping for a device, be aware that many RF devices (especially when they only cost \$50) can only be used for receiving signals; you'll need a device that can both receive and transmit signals.
 
-Also, keep in mind that using a RF transmission device follows strict rules and regulations. The frequency that F-machine operates in, 314.965 MHz, is allowed for unlicensed, civilian use in most (if not all) jurisdictions but do not send at a higher power level or longer than necessary to avoid interfering in other people's equipment.
+Also, keep in mind that using a RF transmission device follows strict rules and regulations. The frequency that F-machine operates in, 314.965 MHz, is allowed for unlicensed, civilian use in some jurisdictions but do not send at a higher power level or longer than necessary to avoid interfering in other people's equipment.
 
-The HackRF One is an entry-level device and often comes bundled with a suitable antenna. Just download the required software for your operating system, connect the device to your computer via USB and you are good to go.
+It is possible to salvage a 2262 chip from another unused remote or buy a new one. You then just need to add a simple 315Mhz transmitter such as the [H34A in 315Mhz version](https://de.aliexpress.com/item/4000511964218.html).
+
+For a more generic (albeit more expensive option) the HackRF One is an entry-level device and often comes bundled with a suitable antenna. Just download the required software for your operating system, connect the device to your computer via USB and you are good to go.
+
+### Transmitting messages with H34A and any arduino compatible microcontroler
+
+Some GitHub repositories will offer very simple pieces of code to reuse:
+
+ * [Tremblr-control](https://github.com/nogasm/tremblr-control)
+ * [RFmachine](https://github.com/Furikuda/RFmachine/)
 
 ### Transmitting a message with HackRF One
 
