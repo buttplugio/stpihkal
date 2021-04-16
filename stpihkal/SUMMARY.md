@@ -19,6 +19,7 @@
  * [Sportdog SD-400 Collar](hardware/sportdog-sd400.md)
  * [Vibratissimo](hardware/vibratissimo.md)
  * [Vorze SA (A10 Cyclone SA, UFO SA)](hardware/vorze-sa.md)
+ * [We-Vibe](hardware/wevibe.md)
 * Firmware and Bootloaders
  * [Kiiroo](firmware/kiiroo.md)
 * Network Protocols
