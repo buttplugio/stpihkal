@@ -14,7 +14,7 @@ The following three parameters can be controlled remotely:
 
 The stroke length can only be adjusted via a screw on the machine itself while power is turned off, and is not controllable remotely.
 
-The manufacturer indicates multiple types of remotes (type 'A' to 'E'). This document refers to the 'A' remotes. It is possible that the other versions use different messages, as well as an entire RF stack entirely.
+The manufacturer indicates multiple types of remotes (type 'A' to 'E'). This document refers to the 'A' type of remote. It is possible that the other versions use different messages, as well as an entire RF stack entirely.
 
 **Note:** The Tremblr has a fan which is always running as long as the hardware power switch is turned on, even while the motor itself is not moving. This produces a continuous white noise level. When designing long-running applications (e.g. an alarm clock), you may need a Smart Plug to turn the power on or off remotely, in addition to the infrastructure for sending commands to the toy.
 
