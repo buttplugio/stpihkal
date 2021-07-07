@@ -25,6 +25,7 @@ module.exports = {
           "/hardware/tcode.md",
           "/hardware/vibratissimo.md",
           "/hardware/vorze-sa.md",
+          "/hardware/wevibe.md",
         ]
       },
       {
