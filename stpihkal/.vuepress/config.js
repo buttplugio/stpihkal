@@ -22,6 +22,7 @@ module.exports = {
           "/hardware/petrainer.md",
           "/hardware/petroom.md",
           "/hardware/sportdog-sd400.md",
+          "/hardware/tcode.md",
           "/hardware/vibratissimo.md",
           "/hardware/vorze-sa.md",
         ]
