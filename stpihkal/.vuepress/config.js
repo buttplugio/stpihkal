@@ -21,6 +21,7 @@ module.exports = {
           "/protocols/oriori-ball.md",
           "/protocols/petrainer.md",
           "/protocols/petroom.md",
+          "/protocols/prettylove.md",
           "/protocols/sportdog-sd400.md",
           "/protocols/tcode.md",
           "/protocols/vibratissimo.md",
