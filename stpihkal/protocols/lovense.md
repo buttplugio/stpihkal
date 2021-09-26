@@ -123,6 +123,7 @@ Denotes Nora toy, running v1.1 firmware, BT Addr of 00:82:05:9A:D3:BD
 | Domi | W |
 | Edge | P |
 | Osci | O |
+| Quake | J |
 
 
 #### Get Battery Level
@@ -485,7 +486,7 @@ OK;
 Returns the production batch number for this device.
 This digits appear to correspond to a `YYMMDD` date during manufacture.
 
-_Availability:_ All toys? Confirmed: Lush 2, Hush, Domi.
+_Availability:_ All toys? Confirmed: Lush 2, Hush, Domi, Quake.
 
 _Command Format_
 ```
