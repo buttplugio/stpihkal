@@ -6,8 +6,8 @@ Lovense has been manufacturing toys since 2011.
 
 ## Bluetooth Details
 
-While all lovense toys use the same protocol, they can communicate
-over bluetooth differently, depending on when they were released.
+While all Lovense toys use the same protocol, they can communicate
+over Bluetooth differently, depending on when they were released.
 
 ### Bluetooth 2.0 Toys
 
@@ -60,7 +60,7 @@ can vary, with
 - Y being any number 0x0-0xf
 - Z usually being 0x3 or 0x4
 
-While some bluetooth APIs can wildcard services, others like
+While some Bluetooth APIs can wildcard services, others like
 WebBluetooth require an exact service UUID to connect. For these
 instances, it's recommended to just generate out all 32 variations of
 the last service, for a total of 34 services, to use with the
@@ -94,7 +94,7 @@ with a number, the range of which is mentioned in the description.
 
 #### Get Device Information
 
-Returns toy model type, firmware version, and bluetooth MAC address,
+Returns toy model type, firmware version, and Bluetooth MAC address,
 as a colon delimited list
 
 _Availability:_ All toys
@@ -161,7 +161,7 @@ OK;
 
 #### Device Status
 
-Retreive the status of the toy. 
+Retreive the status of the toy.
 
 _Availability:_ All toys
 
@@ -199,15 +199,15 @@ OK;
 
 #### Configure Toy Settings
 
-There are settings configurable through the Lovense Remote 
-application which have read and write commands. 
+There are settings configurable through the Lovense Remote
+application which have read and write commands.
 
 ##### AutoSwith
 
 Configures options labelled as follows in Lovense Remote:
 
-- Turn off the toy when there is an accidental bluetooth disconnection
-- Toy will go to last level when it reconnects 
+- Turn off the toy when there is an accidental Bluetooth disconnection
+- Toy will go to last level when it reconnects
 
 Note both options are marked Beta. "Turn off" appears to mean disable vibration.
 
@@ -227,7 +227,7 @@ _Return Example_
 AutoSwith:0:1;
 ```
 
-Indicates "turn off on disconnect" disabled; 
+Indicates "turn off on disconnect" disabled;
 "last level on reconnect" enabled.
 
 _Command Format_
@@ -319,8 +319,8 @@ OK;
 
 #### Preset Levels
 
-The Domi allows customization of the low, medium, and high levels 
-selectable using the hardware buttons. The raw levels are the 
+The Domi allows customization of the low, medium, and high levels
+selectable using the hardware buttons. The raw levels are the
 same integer values used for the Vibrate command.
 
 _Availability:_ Domi
@@ -337,7 +337,7 @@ _Return Example_
 1,9,20;
 ```
 
-Vibration levels. Indicates 1 for low, 9 for medium, 20 for high. 
+Vibration levels. Indicates 1 for low, 9 for medium, 20 for high.
 This is the factory default.
 
 _Command Format_
@@ -345,7 +345,7 @@ _Command Format_
 SetLevel:3:16;
 ```
 
-Set High to level 16. 1, 2, and 3 as the first argument refer to 
+Set High to level 16. 1, 2, and 3 as the first argument refer to
 low, medium, and high, respectively.
 
 _Return Example_
