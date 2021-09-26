@@ -100,31 +100,32 @@ as a colon delimited list
 _Availability:_ All toys
 
 _Command Format_
+
 ```
 DeviceType;
 ```
 
 _Return Example_
+
 ```
 C:11:0082059AD3BD;
 ```
 
-Denotes Nora toy, running v1.1 firmware, BT Addr of 00:82:05:9A:D3:BD
+Denotes Nora toy, running v1.1 firmware, with a Bluetooth address of 00:82:05:9A:D3:BD
 
 **Model Types:**
 
 | Model | Type Letter |
 | ----- | ----------- |
-| Nora | A or C |
-| Max | B |
-| Ambi | L |
-| Lush | S |
-| Hush | Z |
-| Domi | W |
-| Edge | P |
-| Osci | O |
-| Quake | J |
-
+| Nora  | A or C      |
+| Max   | B           |
+| Ambi  | L           |
+| Lush  | S           |
+| Hush  | Z           |
+| Domi  | W           |
+| Edge  | P           |
+| Osci  | O           |
+| Quake | J           |
 
 #### Get Battery Level
 
@@ -133,11 +134,13 @@ Returns the battery level of the toy as an integer percentage from 0-100.
 _Availability:_ All toys
 
 _Command Format_
+
 ```
 Battery;
 ```
 
 _Return Example_
+
 ```
 85;
 ```
@@ -151,11 +154,13 @@ Turns off power to the toy.
 _Availability:_ All toys
 
 _Command Format_
+
 ```
 PowerOff;
 ```
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -167,11 +172,13 @@ Retreive the status of the toy.
 _Availability:_ All toys
 
 _Command Format_
+
 ```
 Status:1;
 ```
 
 _Return Example_
+
 ```
 2;
 ```
@@ -187,6 +194,7 @@ Changes the vibration speed for the toy. Takes integer values from 0-20.
 _Availability:_ All toys
 
 _Command Format_
+
 ```
 Vibrate:10;
 ```
@@ -194,6 +202,7 @@ Vibrate:10;
 Sets vibration speed to 10 (50%).
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -217,6 +226,7 @@ The read command returns 0 or 1; the write command accepts "Off" and "On".
 _Availability:_ All toys? Confirmed: Domi, Hush, Lush 2
 
 _Command Format_
+
 ```
 GetAS;
 ```
@@ -224,6 +234,7 @@ GetAS;
 Read "AutoSwith" options.
 
 _Return Example_
+
 ```
 AutoSwith:0:1;
 ```
@@ -232,6 +243,7 @@ Indicates "turn off on disconnect" disabled;
 "last level on reconnect" enabled.
 
 _Command Format_
+
 ```
 AutoSwith:On:Off;
 ```
@@ -239,6 +251,7 @@ AutoSwith:On:Off;
 Set AutoSwith features to On and Off, respectively.
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -255,6 +268,7 @@ The read command returns 0 or 1; the write command accepts "off" and "on".
 _Availability:_ All toys? Confirmed: Domi, Hush, Lush 2
 
 _Command Format_
+
 ```
 GetLight;
 ```
@@ -262,6 +276,7 @@ GetLight;
 Read Light setting.
 
 _Return Example_
+
 ```
 Light:1;
 ```
@@ -269,6 +284,7 @@ Light:1;
 LED enabled
 
 _Command Format_
+
 ```
 Light:off;
 ```
@@ -276,6 +292,7 @@ Light:off;
 Disable power/connection LED
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -291,6 +308,7 @@ Controls ring of white LEDs on Domi.
 The read command returns 0 or 1; the write command accepts "Off" and "On".
 
 _Command Format_
+
 ```
 GetAlight;
 ```
@@ -298,15 +316,17 @@ GetAlight;
 Read ALight setting.
 
 _Return Example_
+
 ```
 Alight:1;
 ```
 
 Lights enabled
 
-*Important:* note different capitalization between read and write commands
+_Important:_ note different capitalization between read and write commands
 
 _Command Format_
+
 ```
 ALight:Off;
 ```
@@ -314,6 +334,7 @@ ALight:Off;
 Disable lights or power LED
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -327,6 +348,7 @@ same integer values used for the Vibrate command.
 _Availability:_ Domi
 
 _Command Format_
+
 ```
 GetLevel;
 ```
@@ -334,6 +356,7 @@ GetLevel;
 Fetch configured levels.
 
 _Return Example_
+
 ```
 1,9,20;
 ```
@@ -342,6 +365,7 @@ Vibration levels. Indicates 1 for low, 9 for medium, 20 for high.
 This is the factory default.
 
 _Command Format_
+
 ```
 SetLevel:3:16;
 ```
@@ -350,10 +374,10 @@ Set High to level 16. 1, 2, and 3 as the first argument refer to
 low, medium, and high, respectively.
 
 _Return Example_
+
 ```
 OK;
 ```
-
 
 #### Start Accelerometer Data Stream
 
@@ -364,11 +388,13 @@ followed by 3 16-bit little-endian numbers.
 _Availability:_ Max, Nora
 
 _Command Format_
+
 ```
 StartMove:1;
 ```
 
 _Return Example_
+
 ```
 GEF008312ED00;
 ```
@@ -382,11 +408,13 @@ Stops stream of accelerometer data.
 _Availability:_ Max, Nora
 
 _Command Format_
+
 ```
 StopMove:1;
 ```
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -398,11 +426,13 @@ Changes the direction of rotation for the toy.
 _Availability:_ Nora
 
 _Command Format_
+
 ```
 RotateChange;
 ```
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -414,6 +444,7 @@ Changes the rotation speed of the Nora toy. Takes integer values from 0-20.
 _Availability_: Nora
 
 _Command Format_
+
 ```
 Rotate:10;
 ```
@@ -421,6 +452,7 @@ Rotate:10;
 Sets rotation speed to 10 (50%).
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -432,6 +464,7 @@ Changes the inflation level of the Max toy. Takes integer values from 0-5.
 _Availability:_ Max
 
 _Command Format_
+
 ```
 Air:Level:3;
 ```
@@ -439,6 +472,7 @@ Air:Level:3;
 Sets air level to 3 (60%).
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -451,6 +485,7 @@ is 3, and "Air:In:1;" is sent, will inflate to 4.
 _Availability:_ Max
 
 _Command Format_
+
 ```
 Air:In:1;
 ```
@@ -458,6 +493,7 @@ Air:In:1;
 Sets air level to 1 level more inflated than it was.
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -470,6 +506,7 @@ is 3, and "Air:Out:1;" is sent, will deflate to 2.
 _Availability:_ Max
 
 _Command Format_
+
 ```
 Air:Out:1;
 ```
@@ -477,6 +514,7 @@ Air:Out:1;
 Sets air level to 1 level deflated than it was.
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -489,11 +527,13 @@ This digits appear to correspond to a `YYMMDD` date during manufacture.
 _Availability:_ All toys? Confirmed: Lush 2, Hush, Domi, Quake.
 
 _Command Format_
+
 ```
 GetBatch;
 ```
 
 _Return Example_
+
 ```
 190124;
 ```
@@ -507,11 +547,13 @@ always be a single digit.
 _Availability:_ Lush 2, Domi
 
 _Command Format_
+
 ```
 GetPatten;
 ```
 
 _Return Example_
+
 ```
 P:01234;
 ```
@@ -542,6 +584,7 @@ two digits.
 _Availability:_ Lush 2, Domi
 
 _Command Format_
+
 ```
 GetPatten:4;
 ```
@@ -549,6 +592,7 @@ GetPatten:4;
 Domi response using one-digit part indices:
 
 _Return Example_
+
 ```
 P4:1/5:000042003720;
 P4:2/5:000002436658;
@@ -560,6 +604,7 @@ P4:5/5:1110000000;
 Lush 2 response using two-digit part indices:
 
 _Return Example_
+
 ```
 P4:01/01:346797643;
 ```
@@ -575,11 +620,13 @@ to be able to take indices from 0 to 4. Other toys have not been tested.
 _Availability:_ Lush, Hush, Ambi, Domi, Edge, Osci
 
 _Command Format_
+
 ```
 Preset:8;
 ```
 
 _Return Example_
+
 ```
 OK;
 ```
@@ -590,10 +637,10 @@ The applications and repositories below contain implementations of the
 Lovense communications protocol, or have relevant information about
 the hardware/firmware.
 
-* Buttplug C# (All toys): [https://github.com/metafetish/buttplug-csharp](https://github.com/metafetish/buttplug-csharp)
-* Buttplug JS (All toys): [https://github.com/metafetish/buttplug-js](https://github.com/metafetish/buttplug-js)
-* lovesense-rs (Rust, Max/Nora only): [https://github.com/metafetish/lovesense-rs](https://github.com/metafetish/lovesense-rs)
-* lovesense-py (Python, Max/Nora only): [https://github.com/metafetish/lovesense-py](https://github.com/metafetish/lovesense-py)
-* Max/MSP patch (Max/MSP, Max/Nora only): [https://github.com/metafetish/lovesense-max](https://github.com/metafetish/lovesense-max)
-* Node.js Library (Max/Nora only): [https://github.com/metafetish/lovesense-js](https://github.com/metafetish/lovesense-js)
-* WebBluetooth JS Library/Demo (Hush only): [https://github.com/metafetish/lovesense-hush-js-demo](https://github.com/metafetish/lovesense-hush-js-demo)
+- Buttplug C# (All toys): [https://github.com/metafetish/buttplug-csharp](https://github.com/metafetish/buttplug-csharp)
+- Buttplug JS (All toys): [https://github.com/metafetish/buttplug-js](https://github.com/metafetish/buttplug-js)
+- lovesense-rs (Rust, Max/Nora only): [https://github.com/metafetish/lovesense-rs](https://github.com/metafetish/lovesense-rs)
+- lovesense-py (Python, Max/Nora only): [https://github.com/metafetish/lovesense-py](https://github.com/metafetish/lovesense-py)
+- Max/MSP patch (Max/MSP, Max/Nora only): [https://github.com/metafetish/lovesense-max](https://github.com/metafetish/lovesense-max)
+- Node.js Library (Max/Nora only): [https://github.com/metafetish/lovesense-js](https://github.com/metafetish/lovesense-js)
+- WebBluetooth JS Library/Demo (Hush only): [https://github.com/metafetish/lovesense-hush-js-demo](https://github.com/metafetish/lovesense-hush-js-demo)
