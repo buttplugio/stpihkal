@@ -21,8 +21,8 @@ These toys include:
 - Nora
 
 When paired with a system via Bluetooth 2.0, these toys identify as a serial
-port. These toys are also capable of using Bluetooth 4.0, as outlined in the
-next section.
+port. These toys are also capable of using Bluetooth LE, as outlined in the next
+section.
 
 ### Bluetooth LE Toys
 
