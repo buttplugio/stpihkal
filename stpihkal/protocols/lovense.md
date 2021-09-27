@@ -127,6 +127,9 @@ Denotes Nora toy, running v1.1 firmware, BT Addr of 00:82:05:9A:D3:BD
 
 Returns the battery level of the toy as an integer percentage from 0-100.
 
+Some toys will prepend an `s` character (such as `s99`) to indicate that when
+they are active (i.e. when a vibrator motor is turned on).
+
 _Availability:_ All toys
 
 _Command Format_
