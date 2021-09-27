@@ -206,6 +206,27 @@ _Return Example_
 OK;
 ```
 
+#### Set Specific Vibrator's Speed
+
+Changes the vibration speed for a specific vibrator in the toy. Takes a vibrator
+index `1` or `2` and an integer vibration speed from 0-20.
+
+_Availability:_ Edge, Quake
+
+_Command Format_
+
+```
+Vibrate1:5;
+```
+
+Sets the speed of vibrator 1 to 5 (25%).
+
+_Return Example_
+
+```
+Vibrate1:5;
+```
+
 #### Configure Toy Settings
 
 There are settings configurable through the Lovense Remote application which
