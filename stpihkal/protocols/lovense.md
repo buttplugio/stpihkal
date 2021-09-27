@@ -108,7 +108,8 @@ _Return Example_
 C:11:0082059AD3BD;
 ```
 
-Denotes Nora toy, running v1.1 firmware, BT Addr of 00:82:05:9A:D3:BD
+Denotes Nora toy, running v1.1 firmware, with a Bluetooth address of
+00:82:05:9A:D3:BD
 
 **Model Types:**
 
@@ -122,6 +123,7 @@ Denotes Nora toy, running v1.1 firmware, BT Addr of 00:82:05:9A:D3:BD
 | Domi  | W           |
 | Edge  | P           |
 | Osci  | O           |
+| Quake | J           |
 
 #### Get Battery Level
 
@@ -168,7 +170,7 @@ OK;
 
 Retreive the status of the toy.
 
-_Availability:_ All toys
+_Availability:_ Most toys (confirmed unsupported: Quake)
 
 _Command Format_
 
@@ -364,7 +366,7 @@ The Domi allows customization of the low, medium, and high levels selectable
 using the hardware buttons. The raw levels are the same integer values used for
 the Vibrate command.
 
-_Availability:_ Domi
+_Availability:_ Domi, Quake
 
 _Command Format_
 
@@ -573,7 +575,7 @@ OK;
 Returns the production batch number for this device. This digits appear to
 correspond to a `YYMMDD` date during manufacture.
 
-_Availability:_ All toys? Confirmed: Lush 2, Hush, Domi.
+_Availability:_ All toys? Confirmed: Lush 2, Hush, Domi, Quake.
 
 _Command Format_
 
@@ -628,7 +630,7 @@ always be a single digit.
 
 For the Lush 2, the part count and indicies are padded to always use two digits.
 
-_Availability:_ Lush 2, Domi
+_Availability:_ Lush 2, Domi, Quake
 
 _Command Format_
 
@@ -661,10 +663,11 @@ P4:01/01:346797643;
 Starts running a programmed pattern on a loop. Takes an positive integer pattern
 index to start running it, or 0 to stop running the pattern.
 
-While Domi is able to take any pattern index, from 0 to 10, Lush 2 only seems to
-be able to take indices from 0 to 4. Other toys have not been tested.
+While Domi is able to take any pattern index, from 0 to 10, Lush 2 and Quake
+only seem to be able to take indices from 0 to 4. Other toys have not been
+tested.
 
-_Availability:_ Lush, Hush, Ambi, Domi, Edge, Osci
+_Availability:_ Lush, Hush, Ambi, Domi, Edge, Osci, Quake
 
 _Command Format_
 
