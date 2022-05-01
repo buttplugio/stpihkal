@@ -22,6 +22,7 @@ module.exports = {
           "/protocols/petrainer.md",
           "/protocols/petroom.md",
           "/protocols/prettylove.md",
+          "/protocols/screamlabs-x1.md",
           "/protocols/sportdog-sd400.md",
           "/protocols/tcode.md",
           "/protocols/vibratissimo.md",
