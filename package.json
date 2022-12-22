@@ -1,25 +1,45 @@
 {
-  "name": "stpihkal",
-  "version": "0.1.0",
-  "description": "Sex Toy Protocols I Have Known And Loved",
+  "name": "stpihkal-docusaurus",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "vuepress dev stpihkal",
-    "build": "vuepress build stpihkal"
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/buttplugio/stpihkal.git"
-  },
-  "author": "Kyle Machulis <kyle@machul.is>",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/buttplugio/stpihkal/issues"
-  },
-  "homepage": "https://stpihkal.docs.buttplug.io",
   "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.8.2",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-matomo": "^1.0.2",
-    "yarn": "^1.22.10"
+    "@docusaurus/core": "2.2.0",
+    "@docusaurus/preset-classic": "2.2.0",
+    "@mdx-js/react": "^1.6.22",
+    "clsx": "^1.2.1",
+    "docusaurus-plugin-matomo": "^0.0.6",
+    "prism-react-renderer": "^1.3.5",
+    "raw-loader": "^4.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "2.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.14"
   }
 }
