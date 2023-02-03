@@ -1,4 +1,4 @@
-# Sex Toy Protocols I Have Known And Loved - REPO DEPRECATED, MOVED TO DOCS.BUTTPLUG.IO
+# Sex Toy Protocols I Have Known And Loved - DEPRECATED, USE DOCS.BUTTPLUG.IO REPO
 
 [![Patreon donate button](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://www.patreon.com/qdot)
 [![Discourse Forum](https://img.shields.io/badge/discourse-forum-blue.svg)](https://discuss.buttplug.io)
