@@ -1,2 +1,0 @@
-# Vorze Interactive
-* Format: CSV
